@@ -1,0 +1,169 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
+body {
+  background: #0d0d0d;
+  color: #fff;
+}
+
+header {
+  background: #111;
+  padding: 22px;
+  text-align: center;
+}
+
+header h1 {
+  font-size: 26px;
+  color: #00ff88;
+}
+
+header p {
+  color: #ccc;
+  margin-top: 6px;
+}
+
+.categoria-bloco {
+  padding: 20px;
+}
+
+.categoria-bloco h2 {
+  margin-bottom: 15px;
+}
+
+.produtos {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+  gap: 15px;
+}
+
+.card {
+  background: #1a1a1a;
+  padding: 15px;
+  border-radius: 10px;
+  text-align: center;
+  position: relative;
+}
+
+.card h3 {
+  margin: 8px 0;
+  font-size: 16px;
+}
+
+.card p {
+  margin: 6px 0;
+}
+
+.preco {
+  font-size: 18px;
+  font-weight: bold;
+  color: #00ff88;
+}
+
+.botao {
+  display: block;
+  margin-top: 10px;
+  padding: 10px;
+  background: #00ff88;
+  color: #000;
+  text-decoration: none;
+  border-radius: 6px;
+  font-weight: bold;
+}
+
+.botao:hover {
+  background: #00cc6f;
+}
+
+.badge {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  background: #0066ff;
+  color: #fff;
+  padding: 3px 8px;
+  font-size: 11px;
+  border-radius: 5px;
+}
+
+.badge.destaque {
+  background: #ff4500;
+}
+
+.badge.premium {
+  background: gold;
+  color: #000;
+}
+
+.img-produto {
+  width: 100%;
+  height: 150px;
+  object-fit: cover;
+  border-radius: 8px;
+  margin-bottom: 10px;
+}
+
+.info {
+  background: #111;
+  padding: 18px;
+  text-align: center;
+  color: #ccc;
+  margin-top: 20px;
+}
+
+/* ================= RESPONSIVO ================= */
+@media (max-width: 768px) {
+
+  header h1 {
+    font-size: 22px;
+  }
+
+  .produtos {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .img-produto {
+    height: 130px;
+  }
+}
+
+@media (max-width: 480px) {
+
+  .produtos {
+    grid-template-columns: 1fr;
+  }
+
+  .botao {
+    font-size: 15px;
+  }
+}
+/* ================= BOTÃO FLUTUANTE WHATSAPP ================= */
+
+.whatsapp-float {
+  position: fixed;
+  width: 60px;
+  height: 60px;
+  bottom: 20px;
+  right: 20px;
+  background-color: #25D366;
+  color: #fff;
+  border-radius: 50%;
+  text-align: center;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3);
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.whatsapp-float:hover {
+  background-color: #1ebe5d;
+}
+
+.whatsapp-icon {
+  width: 32px;
+  height: 32px;
+}
